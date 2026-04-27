@@ -10,12 +10,14 @@ import {
   Phone,
   Server,
   Shield,
+  ShieldCheck,
   Sparkles,
   Wrench,
 } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "./components/brand-icons";
 import { SiteNav } from "./components/site-nav";
 import { SiteFooter } from "./components/site-footer";
+import { certifications } from "./data/certifications";
 import { projects } from "./data/projects";
 
 const stackIcons: Record<string, typeof Code2> = {
@@ -58,8 +60,9 @@ export default function Home() {
             </h1>
 
             <p className="t-body-lg mt-8 max-w-[60ch]">
-              I build scalable web applications with a focus on clean APIs, responsive UIs,
-              and automated, containerized deployments.
+              I&apos;m Teetat &ldquo;Fame&rdquo; Teerawaropas — I build scalable web
+              applications with a focus on clean APIs, responsive UIs, and automated,
+              containerized deployments.
             </p>
 
             <div className="mt-10 flex flex-wrap items-center gap-3">
@@ -280,6 +283,13 @@ export default function Home() {
                     </p>
                   </li>
                   <li>
+                    <p className="t-mono workflow-preview">Security-Minded Development</p>
+                    <p className="t-body-lg mt-2">
+                      Container hardening, secrets management, and vulnerability scanning
+                      (Trivy) baked into the CI pipeline — not bolted on after.
+                    </p>
+                  </li>
+                  <li>
                     <p className="t-mono workflow-ship">Continuous Learning</p>
                     <p className="t-body-lg mt-2">
                       Actively integrating AI/LLM capabilities into web applications and
@@ -307,12 +317,64 @@ export default function Home() {
           </div>
         </section>
 
+        <div className="divider-soft" />
+
+        {/* CERTIFICATIONS */}
+        <section className="px-6 py-28 md:px-10 md:py-32" id="certifications">
+          <div className="mx-auto max-w-[1200px]">
+            <div className="mb-14 max-w-[60ch]">
+              <p className="t-mono text-muted-strong">05 · Certifications</p>
+              <h2 className="t-h2 mt-4">Credentials and continuing education.</h2>
+            </div>
+
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {certifications.map((cert) => (
+                <div
+                  className="card-shadow flex flex-col gap-4 rounded-lg bg-paper p-6"
+                  key={cert.credentialId ?? cert.title}
+                >
+                  <div className="flex items-center gap-2 text-muted-strong">
+                    <ShieldCheck aria-hidden size={14} />
+                    <p className="t-mono">{cert.issuer}</p>
+                  </div>
+                  <h3 className="t-h4 text-ink">{cert.title}</h3>
+                  {cert.issuerLong && (
+                    <p className="t-body">{cert.issuerLong}</p>
+                  )}
+                  <div className="flex flex-wrap gap-x-6 gap-y-2 text-muted-strong">
+                    <span className="t-mono-13">Issued · {cert.date}</span>
+                    {cert.hours && (
+                      <span className="t-mono-13">{cert.hours} hours</span>
+                    )}
+                  </div>
+                  {cert.credentialId && (
+                    <p className="t-mono-13 text-muted">
+                      ID · {cert.credentialId}
+                    </p>
+                  )}
+                  {cert.pdf && (
+                    <a
+                      className="t-link mt-auto inline-flex items-center gap-1 text-muted-strong link-hover"
+                      href={cert.pdf}
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      View certificate
+                      <ArrowUpRight aria-hidden size={14} />
+                    </a>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <div className="divider-strong" />
 
         {/* CONTACT */}
         <section className="px-6 py-28 md:px-10 md:py-32" id="contact">
           <div className="mx-auto max-w-[1200px]">
-            <p className="t-mono text-muted-strong">05 · Contact</p>
+            <p className="t-mono text-muted-strong">06 · Contact</p>
             <h2 className="t-h2 mt-4 max-w-[18ch]">
               Let&apos;s build something good.
             </h2>

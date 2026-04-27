@@ -8,6 +8,7 @@ const links: NavLink[] = [
   { href: "/#process", label: "Process" },
   { href: "/#stack", label: "Stack" },
   { href: "/#about", label: "About" },
+  { href: "/#certifications", label: "Certifications" },
 ];
 
 export function SiteNav() {
