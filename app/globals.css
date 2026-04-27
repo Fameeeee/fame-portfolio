@@ -124,6 +124,29 @@ body {
 }
 
 /* ============================================================ */
+/* SKIP-TO-CONTENT (a11y)                                        */
+/* ============================================================ */
+.skip-link {
+  position: absolute;
+  left: 12px;
+  top: -100px;
+  z-index: 100;
+  padding: 10px 16px;
+  background: var(--color-ink);
+  color: var(--color-paper);
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  text-decoration: none;
+  transition: top 200ms ease;
+}
+.skip-link:focus,
+.skip-link:focus-visible {
+  top: 12px;
+}
+
+/* ============================================================ */
 /* SHADOW-AS-BORDER UTILITIES                                    */
 /* ============================================================ */
 .ring-border        { box-shadow: var(--shadow-ring); }
