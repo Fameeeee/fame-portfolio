@@ -173,11 +173,11 @@ export default function Home() {
             <div className="mb-14 max-w-[60ch]">
               <p className="t-mono text-muted-strong">02 · How I work</p>
               <h2 className="t-h2 mt-4">
-                From idea to production, one disciplined pipeline.
+                Learning by building, one project at a time.
               </h2>
               <p className="t-body-lg mt-6">
-                I treat every project like a deploy pipeline: develop with rigor, preview before
-                committing, ship with confidence.
+                I&apos;m early in my career, so I lean on a simple loop: understand the problem, build
+                something that works, then improve it with feedback.
               </p>
             </div>
 
@@ -185,27 +185,27 @@ export default function Home() {
 
             <div className="grid gap-8 md:grid-cols-3">
               <div className="flex flex-col gap-3">
-                <p className="t-mono workflow-develop">Develop</p>
-                <h3 className="t-h4 text-ink">Design schemas, model the domain.</h3>
+                <p className="t-mono workflow-develop">Learn</p>
+                <h3 className="t-h4 text-ink">Understand before I code.</h3>
                 <p className="t-body">
-                  Start from the data — clear schemas, typed contracts, an API surface that survives
-                  contact with reality.
+                  I read docs, ask questions, and sketch the problem first — so I&apos;m solving the
+                  right thing, not just writing code that compiles.
                 </p>
               </div>
               <div className="flex flex-col gap-3">
-                <p className="t-mono workflow-preview">Preview</p>
-                <h3 className="t-h4 text-ink">Build, polish, run it like prod.</h3>
+                <p className="t-mono workflow-preview">Build</p>
+                <h3 className="t-h4 text-ink">Ship a working version early.</h3>
                 <p className="t-body">
-                  Containerized previews, CI on every PR, performance and accessibility checked
-                  before sign-off.
+                  I get something running end-to-end, then layer on polish — clean components,
+                  typed code, and small commits I can explain.
                 </p>
               </div>
               <div className="flex flex-col gap-3">
-                <p className="t-mono workflow-ship">Ship</p>
-                <h3 className="t-h4 text-ink">Deploy, observe, iterate.</h3>
+                <p className="t-mono workflow-ship">Improve</p>
+                <h3 className="t-h4 text-ink">Take feedback, iterate openly.</h3>
                 <p className="t-body">
-                  Reproducible deploys with Docker / Kubernetes, monitor what matters, then keep
-                  the feedback loop short.
+                  Code review, mentor input, and real users are how I grow. I track what I learned
+                  on each project and bring it into the next one.
                 </p>
               </div>
             </div>
